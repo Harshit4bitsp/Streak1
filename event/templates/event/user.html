@@ -1,0 +1,16 @@
+{% extends "event/base.html"%}
+{%block content%}
+    {% for i in view_users %}
+        <div class="container">
+            <div class="my-class">
+                <h1><a class ="event-title" href="{%url 'event-detail'%i.event_id}">{{i.user_ph}}</a></h1>
+                <br>
+                <p>{{i.the_user}}</p>
+                <br>
+                <p>{{i.user_ref}}</p>
+                <br>
+                <p>{{i.total_points}}</p>    
+            </div>
+        </div>
+    {% endfor %}
+{%endblock%}

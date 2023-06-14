@@ -1,0 +1,23 @@
+{% extends "event/base.html"%}
+{%block content%}
+    {% for i in add_Event %}
+        <div class="container">
+            <div class="my-class">
+                <h1><a class ="event-title" href="{%url 'event-detail'i.id}">{{i.add_event_tag}}</a></h1>
+                <a href="{%url 'edit-event'%}">
+                    <button>Edit</button>
+                </a>
+                <br>
+                <p>{{i.event_id}}</p>
+                <br>
+                <!-- <p>{{i.add_event_tag}}</p>
+                <br> -->
+                <p>{{i.add_date}}</p>
+                <br>
+                <p>{{i.transaction_type}}</p>
+                <br>
+                <p>{{i.add_points}}</p>
+            </div>
+        </div>
+    {% endfor %}
+{%endblock%}

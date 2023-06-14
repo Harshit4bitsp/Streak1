@@ -1,0 +1,10 @@
+{% extends "event/base.html"%}
+{%block content%}
+<form action="/submit" method="post">
+    <input type="text" name="event_tag" placeholder="Event Tag">
+    <input type="text" name="user_type" placeholder="User Type">
+    <input type="text" name="transaction_type" placeholder="Transaction Type">
+    <input type="number" name="points" placeholder="Points">
+    <input type="submit" value="Submit">
+  </form>
+{%endblock%}

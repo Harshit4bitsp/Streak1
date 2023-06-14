@@ -1,0 +1,23 @@
+{% extends "event/base.html"%}
+{%block content%}
+    {% for i in events %}
+        <div class="container">
+            <div class="my-class">
+                <h1><a class ="event-title" href="{%url 'event-detail'% i.id}">{{i.event_ref.even_tag}}</a></h1>
+                <a href="{%url 'edit-event'%}">
+                    <button>Edit</button>
+                </a>
+                <br>
+                <p>Event ID: {{i.id}}</p>
+                <br>
+                <p>User Phone Number: {{i.user_ref.phone_number}}</p>
+                <br>
+                <p>Created At: {{i.created_at}}</p>
+                <br>
+                <p>{{i.event_ref.transaction_type}}</p>
+                <br>
+                <p>{{i.opening_balance}}</p>
+            </div>
+        </div>
+    {% endfor %}
+{%endblock%}

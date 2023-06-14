@@ -1,0 +1,23 @@
+{% extends "event/base.html"%}
+{%block content%}
+    <h1>Home Page</h1>
+    <a href="{%url 'event-view'%}">
+        <button>All Events</button>
+    </a>
+    <br>
+    <a href="{%url 'add_event-view'%}">
+        <button>Manage Event</button>
+    </a>
+    <br>
+    <a href="{%url 'user-view'%}">
+        <button>User Data</button>
+    </a>
+    <br>
+    <a href="https://www.google.com">
+        <button>User Ledger</button>
+    </a>
+    <br>
+    <a href="{%url 'add-event'%}">
+        <button>Add/Edit Events</button>
+    </a>
+{%endblock content%}

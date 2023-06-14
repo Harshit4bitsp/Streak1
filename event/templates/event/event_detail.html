@@ -1,0 +1,21 @@
+{% extends "event/base.html"%}
+{%block content%}
+      <div class="container">
+          <div class="my-class">
+              <h1><a class ="event-title" href="{%url 'event-detail'}">{{object.event_tag}}</a></h1>
+              <a href="{%url 'edit-event'%}">
+                  <button>Edit</button>
+              </a>
+              <br>
+              <p>{{object.event_ref}}</p>
+              <br>
+              <p>{{object.user_ref}}</p>
+              <br>
+              <p>{{object.event_date}}</p>
+              <br>
+              <p>{{object.transaction_type}}</p>
+              <br>
+              <p>{{object.total_points}}</p>
+          </div>
+      </div>
+{%endblock%}
