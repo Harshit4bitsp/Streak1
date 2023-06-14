@@ -52,3 +52,5 @@ class event_log(models.Model):
 
     def __str__(self):
         return str(self.event_ref.id)
+    
+    # testing
